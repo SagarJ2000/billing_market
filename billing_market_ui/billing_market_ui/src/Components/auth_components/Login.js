@@ -2,7 +2,7 @@ import React from 'react';
 import {useForm} from 'react-hook-form';
 import axios from 'axios';
 import { ErrorMessage } from '@hookform/error-message';
-import {useNavigate, usrNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 function Login() {
   const {register, handleSubmit, formState:{errors} } = useForm();

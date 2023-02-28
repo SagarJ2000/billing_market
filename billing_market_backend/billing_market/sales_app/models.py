@@ -10,12 +10,12 @@ class Customer(models.Model):
     address = models.TextField(blank=True)
 
     def __str__(self):
-        return f'{self.name} {self.contact_number}'
+        return f'{self.name} '
 
 
 class Invoice(models.Model):
     Invoice_id = models.BigAutoField(primary_key=True)
-    invoice_number = models.CharField(max_length=10 ,editable=False, unique=True)
+    invoice_number = models.CharField(max_length=10, unique=True)
     total_cost_without_gst = models.FloatField(default=0)
     total_cost_with_gst = models.FloatField(default=0)
     total_cost_with_offer_and_gst = models.FloatField(default=0)
@@ -39,4 +39,4 @@ class InvoiceProduct(models.Model):
     invoice_product_total_cost_with_offer = models.FloatField(default=0) 
 
     def __str__(self):
-        return f'{self.invoice_number} {self.invoice_product} {self.invoice_product_quantity}'
+        return f'{self.invoice}   {self.product_invoice}'

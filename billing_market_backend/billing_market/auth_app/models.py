@@ -19,7 +19,7 @@ class EmployeeUser(AbstractUser):
     )
     user_role = models.CharField(max_length=20, choices=ROLES, default='SalesMan')
 
-    REQUIRED_FIELDS = ('email',)
+    REQUIRED_FIELDS = ('email', 'user_roll')
 
     def __str__(self):
         return f'{self.first_name}  {self.last_name}'

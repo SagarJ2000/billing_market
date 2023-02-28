@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import CEONavBar from '../Layout/CEONavBar';
+
 
 function CEODashboard() {
   return (
     <>
-      <h1>CEODashboard</h1>
-      <br/>
-      <br/>
-      <h5>Data added successfully !!!</h5>
+    <CEONavBar />
+
+    <Outlet />
     </>
-  )
+  );
 }
 
-export default CEODashboard
+export default CEODashboard;

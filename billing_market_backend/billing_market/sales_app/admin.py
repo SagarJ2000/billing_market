@@ -18,7 +18,7 @@ admin.site.register(Invoice,InvoiceAdmin)
 
 class InvoiceProductAdmin(admin.ModelAdmin):
     model = InvoiceProduct
-    list_display = ['invoice_product_id','invoice','invoice_product_quantity','invoice_product_cost_per_quantity',
+    list_display = ['invoice_product_id','invoice','product_invoice','invoice_product_quantity','invoice_product_cost_per_quantity',
     'invoice_product_cost_per_quantity_with_offer','invoice_product_total_cost','invoice_product_total_cost_with_gst','invoice_product_total_cost_with_offer']
 
     

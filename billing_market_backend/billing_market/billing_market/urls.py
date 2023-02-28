@@ -22,4 +22,5 @@ urlpatterns = [
     path('auth/', include('auth_app.urls')),
     path('token/', token_obtain_pair),
     path('refresh/', token_refresh),
+    path('report/', include('report_app.urls')),
 ]
