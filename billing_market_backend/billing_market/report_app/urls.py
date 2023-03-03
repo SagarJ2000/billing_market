@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import DailyReportAPIView
+from .views import ReportAPIView
 
 urlpatterns = [
-    path('daily/',DailyReportAPIView.as_view())
+    path('daily/',ReportAPIView.as_view())
 ]

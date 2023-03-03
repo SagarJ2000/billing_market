@@ -9,11 +9,23 @@ current_date = current_date.strftime("%Y-%m-%d")
 
 print(current_date)
 
-class DailyReportAPIView(APIView):
-    def get(self, request):
+class ReportAPIView(APIView):
+    def post(self, request):
+        date = request.data.get('date')
+        start_date=request.data.get('start_date')
+        end_date = request.data.get('end_date')
+        print(date)
         try:
-            objs = Invoice.objects.filter(invoice_date=current_date)
-            print(objs)
+            if date:
+                objs = Invoice.objects.filter(invoice_date=date)
+                print("date=====",objs)
+            elif start_date and end_date:
+
+                objs = Invoice.objects.filter(invoice_date__gte = start_date, invoice_date__lte = end_date).order_by('invoice_date')
+            else :
+                objs = Invoice.objects.filter(invoice_date=current_date)
+
+
         except Invoice.DoesNotExist as e:
             return Response(data={"detail": "NOT FOUND"})
         serializer = InvoiceSerializers(objs, many=True)

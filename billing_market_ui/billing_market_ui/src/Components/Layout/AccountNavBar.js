@@ -1,10 +1,10 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-function CEONavBar() {
+function AccountNavBar() {
   return (
-    <>
-         <center><u><h1>CEO Dashboard</h1></u></center>
+    <>  
+         <center><u><h1>Accountant Dashboard</h1></u></center>
          <br/>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <NavLink className="navbar-brand" to="#">Navbar</NavLink>
@@ -13,18 +13,14 @@ function CEONavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-            <NavLink className="nav-item nav-link active" to="/ceo/register">CEO<span className="sr-only"></span></NavLink>
-            <NavLink className="nav-item nav-link" to="/list">List_Employee</NavLink>
-            <NavLink className="nav-item nav-link" to="/update">Update Employee</NavLink>
-            <NavLink className="nav-item nav-link" to="/remove">Remove Employee</NavLink>
-            <NavLink className="nav-item nav-link" to="/report">Report</NavLink>
+            <NavLink className="nav-item nav-link active" to="/accountant/report">REPORT<span className="sr-only"></span></NavLink>
+
             <NavLink className="nav-item nav-link disabled" to="#"></NavLink>
             </div>
         </div>
         </nav>
-
     </>
   )
 }
 
-export default CEONavBar;
+export default AccountNavBar

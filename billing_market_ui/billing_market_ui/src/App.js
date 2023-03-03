@@ -12,7 +12,6 @@ import EmployeeList from './Components/auth_components/EmployeeList';
 import RemoveEmployee from './Components/auth_components/RemoveEmployee';
 import UpdateEmployee from './Components/auth_components/UpdateEmployee';
 
-
 function App() {
   return (
     <>
@@ -20,18 +19,19 @@ function App() {
       <Routes>
       <Route  path='/' element={<Login />} />
         <Route  path='/login' element={<Login />} />
-         
         <Route  path='/ceo' element={<CEODashboard />} />
         <Route  path='/register' element={<UserRegistration />} />
         <Route  path='/list' element={<EmployeeList />} />
         <Route  path='/remove' element={<RemoveEmployee />} />
         <Route  path='/update' element={<UpdateEmployee />} />
-
         <Route  path='/manager' element={<ManagerDashboard />} />
-        <Route  path='/accountant' element={<AccountantDashBoard />} />
+
         <Route  path='/salesman' element={<SalesManDashboard />} /> 
         <Route  path='/staff' element={<StaffDashboard />} /> 
-        <Route  path='/report' element={<Report />} /> 
+        
+        <Route  path='/accountant' element={<AccountantDashBoard/>} >
+        <Route  path='report' element={<Report/>} />
+        </Route> 
 
       </Routes>
     </BrowserRouter>

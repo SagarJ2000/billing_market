@@ -25,4 +25,4 @@ class InvoiceSerializers(serializers.ModelSerializer):
 
     class Meta:
         model = Invoice
-        fields = ['invoice_date' , 'product_in_invoice']
+        fields ='__all__'
